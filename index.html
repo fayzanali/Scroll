@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="bg.jpg" id="bg">
+        <img src="man.png" id="man">
+        <img src="clouds_1.png" id="clouds_1">
+        <img src="clouds_2.png" id="clouds_2">
+        <img src="mountain_left.png" id="mountain_left">
+        <img src="mountain_right.png" id="mountain_right">
+        <h2 id="text">Mountains</h2>
+    </section>
+    <div class="sec">
+        <h2>Animated Mountains</h2>
+        <p>Ice Mountain is a mountain ridge and algific talus slope that is part of a 149-acre (60 ha) preserve near the community of North River Mills in Hampshire County, West Virginia, United States. It was designated a National Natural Landmark in 2012.
+            <br>
+            <br>
+            Ice Mountain is protected by The Nature Conservancy and open for visits by small groups of hikers. It is nicknamed "Nature's Ice Box" and "Nature's Refrigerator" owing to its ice vents that release cool air all year longce Mountain is protected by The Nature Conservancy and open for visits by small groups of hikers. It is nicknamed "Nature's Ice Box" and "Nature's Refrigerator" owing to its ice vents that release cool air all year long.
+            <br>
+            <br>
+            The accumulated rock detritus at Ice Mountain's base forms a talus that is 50 feet (15 m) thick in some places. It creates a refrigeration effect. As cold air sinks into the talus pile during the cooler months it forms masses of ice and ice vents inside it. The ice vents are in a section about 200 yards (180 m) in length along Ice Mountain's southern flank.
+        </p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.js"></script>
+    <script>
+        gsap.to("#bg", {
+            scrollTrigger : {
+                scrub:1
+            },
+            scale:1.5
+        });
+        gsap.to("#man", {
+            scrollTrigger : {
+                scrub:1
+            },
+            scale:0.5,
+        });
+        gsap.to("#mountain_left", {
+            scrollTrigger : {
+                scrub:1
+            },
+            x:-500,
+        });
+        gsap.to("#mountain_right", {
+            scrollTrigger : {
+                scrub:1
+            },
+            x:500,
+        });
+
+        gsap.to("#clouds_1", {
+            scrollTrigger : {
+                scrub:1
+            },
+            x:200,
+        });
+        gsap.to("#clouds_2", {
+            scrollTrigger : {
+                scrub:1
+            },
+            x:-200,
+        });
+        gsap.to("#text", {
+            scrollTrigger : {
+                scrub:1
+            },
+            y:500,
+        });
+    </script>
+</body>
+</html>
